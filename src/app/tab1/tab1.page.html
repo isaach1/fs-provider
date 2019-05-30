@@ -7,26 +7,13 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <img src="https://i.boring.host/16D5g7wX.jpg"><br>
-          <ion-card>
-            <ion-card-subtitle style="margin: 15px">Location: Portugal</ion-card-subtitle>
-            <ion-card-subtitle style="margin: 15px">Price: 400</ion-card-subtitle>
-            <ion-card-subtitle style="margin: 15px">Owner: Jeremy Clarkson</ion-card-subtitle>
-            <ion-card-subtitle style="margin: 15px">Last Renter: James May</ion-card-subtitle>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <img src="https://i.boring.host/16D7KHvC.jpg"><br>
-          <ion-card>
-            <ion-card-subtitle style="margin: 15px">Location: Japan</ion-card-subtitle>
-            <ion-card-subtitle style="margin: 15px">Price: 150</ion-card-subtitle>
-            <ion-card-subtitle style="margin: 15px">Owner: Jeremy Clarkson</ion-card-subtitle>  
-            <ion-card-subtitle style="margin: 15px">Last Renter: Richard Hammond</ion-card-subtitle>       
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <ion-list>
+      <ion-card *ngFor="let rental of rentals">
+        <img src="{{rental.image}}" (click)="goRental(rental)">
+        <ion-item>
+          <p>{{rental.name}}</p>
+          <p>{{rental.location}}</p>
+        </ion-item>
+      </ion-card>
+    </ion-list>
 </ion-content>
