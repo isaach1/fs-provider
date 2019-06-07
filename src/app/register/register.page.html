@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col align-self-center>
+        <div text-center>
+          <h3><b>Register</b></h3>
+        </div>
+        <div>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="firstname" placeholder="Firstname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="lastname" placeholder="Lastname"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-input type="text"[(ngModel)]="email" placeholder="Email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Confirm Password"></ion-input>
+          </ion-item>
+        </div>
+        <div>
+          <ion-button size="large" (click)="goToHome()">Register</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
