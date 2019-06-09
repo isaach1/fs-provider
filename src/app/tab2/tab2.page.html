@@ -8,22 +8,14 @@
 
 <ion-content>
   <ion-card>
+    <ion-card-title style="margin: 5px">Name: </ion-card-title>
+    <ion-input placeholder="Enter Name" [(ngModel)]="name"></ion-input>
     <ion-card-title style="margin: 5px">Location: </ion-card-title>
-    <ion-input placeholder="Enter Location"></ion-input>
+    <ion-input placeholder="Enter Location" [(ngModel)]="location"></ion-input>
     <ion-card-title style="margin: 5px">Price: </ion-card-title>
-    <ion-input placeholder="Enter Price"></ion-input>
-    <ion-card-title style="margin: 5px">Number of Guests: </ion-card-title>
-    <ion-input placeholder="Enter Number of Guests"></ion-input>
+    <ion-input placeholder="Enter Price" [(ngModel)]="price"></ion-input>
+    <ion-card-title style="margin: 5px">Image Url:  </ion-card-title>
+    <ion-input placeholder="Enter Image Url" [(ngModel)]="imageUrl"></ion-input>
   </ion-card>
-  <ion-card>
-    <ion-card-title style="margin: 5px">Start Date: </ion-card-title>
-    <ion-item>
-      <ion-datetime display-format="DD/MM/YYYY" placeholder="Enter Start Date"></ion-datetime>
-    </ion-item>
-    <ion-card-title style="margin: 5px">Finish Date: </ion-card-title>   
-    <ion-item>
-      <ion-datetime display-format="DD/MM/YYYY" placeholder="Enter End Date"></ion-datetime>
-    </ion-item>
-  </ion-card>
-  <ion-button color="success" size="large">Add New Rental</ion-button>
+  <ion-button color="success" size="large" (click)="createRental()">Add New Rental</ion-button>
 </ion-content>

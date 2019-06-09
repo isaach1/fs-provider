@@ -9,10 +9,15 @@
 <ion-content>
     <ion-list>
       <ion-card *ngFor="let rental of rentals">
-        <img src="{{rental.image}}" (click)="goRental(rental)">
+        <img src="{{rental.imageUrl}}" (click)="goRental(rental)">
         <ion-item>
-          <p>{{rental.name}}</p>
-          <p>{{rental.location}}</p>
+          <ion-card-subtitle>Name: {{rental.name}}</ion-card-subtitle>
+        </ion-item>
+        <ion-item>
+          <ion-card-subtitle>Location: {{rental.location}}</ion-card-subtitle>
+        </ion-item>
+        <ion-item>
+          <ion-card-subtitle>Price: {{rental.price}}</ion-card-subtitle>
         </ion-item>
       </ion-card>
     </ion-list>

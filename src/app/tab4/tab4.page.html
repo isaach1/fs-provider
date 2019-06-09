@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card>
+      <h2 style="margin-left: 15px"><b>Hi, I'm {{provider.firstname + " " + provider.lastname}}</b></h2>
+      <ion-avatar class="avatar">
+        <img src="https://i.boring.host/187CIWuo.jpg">
+      </ion-avatar>
+  
+      <ion-item>
+        <ion-card-header>
+          <ion-card-title>About</ion-card-title>
+          <ion-card-subtitle>Email: {{provider.email}}</ion-card-subtitle>
+          <ion-card-subtitle>Phone number: +447755312212</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+  
+      <ion-item>
+        <ion-card-header>
+          <ion-card-title>Other Information</ion-card-title>
+          <ion-card-subtitle>Number of bookings made: {{provider.bookings}}</ion-card-subtitle>
+          <ion-card-subtitle>Number of reviews received: {{provider.reviews}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+  
+      <ion-item>
+          <ion-list>
+              <ion-card-header>
+                <ion-card-title>Reviews List</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-list>
+                  <ion-item>
+                    <p>No reviews listed.</p>
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+            </ion-list>
+      </ion-item>
+    </ion-card>
+    </ion-list>
+
+    
+  <ion-button color="secondary" expand="full" style="margin: 15px" (click)="goToHome()">Log out</ion-button>
+</ion-content>

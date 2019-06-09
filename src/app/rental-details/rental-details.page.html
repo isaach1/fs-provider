@@ -8,7 +8,26 @@
 </ion-header>
 
 <ion-content>
-  
+  <h1 style="text-align: center"><b>This house is very nice</b></h1>
+  <img src="{{currentRental.imageUrl}}" class="image" style="margin: 15px">
+  <ion-card>
+    <ion-item>Name: {{currentRental.name}}</ion-item>
+    <ion-item>Address: {{currentRental.location}}</ion-item>
+    <ion-item>Price: {{currentRental.price}}</ion-item>
+  </ion-card>
+  <ion-button color="secondary" size="large" (click)="goToEdit()">Make Edits</ion-button>
+  <ion-button color="danger" size="large" (click)="deleteProperty()">Delete This Property</ion-button>
 
-  <ion-button color="secondary" size="large">Make Edits</ion-button>
+  <h2 style="text-align: center">List of Bookings on this Property</h2>
+  <ion-list>
+    <ion-card *ngFor="let booking of bookings">
+      <ion-item>
+        <p>Booking details: </p>
+      </ion-item>
+      <ion-item>Date From: {{booking.dateFrom}}</ion-item>
+      <ion-item>Date To: {{booking.dateTo}}</ion-item>
+      <ion-button color="primary" size="large" (click)="accept()">Accept Request</ion-button>
+      <ion-button color="secondary" size="large" (click)="reject()">Reject Request</ion-button>
+    </ion-card>
+  </ion-list>
 </ion-content>
